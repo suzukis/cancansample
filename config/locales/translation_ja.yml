@@ -1,0 +1,11 @@
+ja:
+  railties:
+    scaffold:
+      new: "新しい%{model}"
+      back: "戻る"
+      editing: "編集"
+      show: "閲覧"
+      listing: "%{model}のリスト"
+      edit: "[編集]"
+      destroy: "削除"
+      confirmation: "よろしいですか？"
