@@ -14,12 +14,12 @@
     <td><%= blog.title %></td>
     <td><%= blog.user %></td>
     <td><%= link_to 'Show', blog %></td>
-    <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-    <td><%= link_to 'Destroy', blog, confirm: 'Are you sure?', method: :delete %></td>
+    <td><% if can? :update, blog %><%= link_to 'Edit', edit_blog_path(blog) %><% end %></td>
+    <td><% if can? :destroy, blog %><%= link_to 'Destroy', blog, confirm: 'Are you sure?', method: :delete %><% end %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Blog', new_blog_path %>
+<% if can? :create, Blog %><%= link_to 'New Blog', new_blog_path %><% end %>
